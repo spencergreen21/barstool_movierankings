@@ -99,6 +99,12 @@ for _ in range(5):
 
 print(movies)
 
+with open("movie_list.txt", "w") as file:
+    for movie in movies:
+        file.write(movie + "\n")
+
+print("Movie list saved to movie_list.txt")
+
 # Close the webdriver
 driver.quit()
 
